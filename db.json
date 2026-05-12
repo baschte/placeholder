@@ -1,14 +1,279 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "layouts": [
+        {
+            "id": 0,
+            "name": "Vollbild",
+            "description": "Eine vollflaechige Produktpraesentation.",
+            "icon": "full",
+            "previewClassName": "atlas-layout-icon--full",
+            "slots": [
+                {
+                    "id": "main",
+                    "label": "Hauptprodukt",
+                    "allowedTypes": ["product"],
+                    "defaultItem": null
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Zweispaltig",
+            "description": "Zwei gleichwertige Produkt-Slots nebeneinander.",
+            "icon": "two-columns",
+            "previewClassName": "atlas-layout-icon--two",
+            "slots": [
+                {
+                    "id": "left",
+                    "label": "Linkes Produkt",
+                    "allowedTypes": ["product"],
+                    "defaultItem": null
+                },
+                {
+                    "id": "right",
+                    "label": "Rechtes Produkt",
+                    "allowedTypes": ["product"],
+                    "defaultItem": null
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Dreispaltig",
+            "description": "Drei kompakte Produkt-Slots fuer Produktvergleiche.",
+            "icon": "three-columns",
+            "previewClassName": "atlas-layout-icon--three",
+            "slots": [
+                {
+                    "id": "left",
+                    "label": "Linkes Produkt",
+                    "allowedTypes": ["product"],
+                    "defaultItem": null
+                },
+                {
+                    "id": "center",
+                    "label": "Mittleres Produkt",
+                    "allowedTypes": ["product"],
+                    "defaultItem": null
+                },
+                {
+                    "id": "right",
+                    "label": "Rechtes Produkt",
+                    "allowedTypes": ["product"],
+                    "defaultItem": null
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "id": "atlas-flash-1005-xp",
+            "sku": "1005 XP",
+            "title": "FLASH 1005 XP ESD",
+            "subtitle": "Sportlicher Sicherheitsschuh mit XP metallfreier Durchtritthemmung.",
+            "category": "Sicherheitshalbschuh",
+            "safetyClass": "S1P",
+            "series": "FLASH",
+            "price": "129,90 EUR",
+            "previewImage": "/demo/products/flash-1005-xp-preview.png",
+            "pdfImage": "/demo/products/flash-1005-xp-print.png",
+            "previewClassName": "atlas-product-preview--flash",
+            "technologies": ["xp", "esd", "aktiv-x"],
+            "features": [
+                "metallfreie XP Durchtritthemmung",
+                "ESD-Ausstattung",
+                "aktiv-X Funktionsfutter"
+            ]
+        },
+        {
+            "id": "atlas-c-6305-xp",
+            "sku": "6305 XP",
+            "title": "C 6305 XP ESD",
+            "subtitle": "Robuster Sicherheitsschuh mit CORDURA Obermaterial.",
+            "category": "Sicherheitshalbschuh",
+            "safetyClass": "S3",
+            "series": "CX",
+            "price": "139,90 EUR",
+            "previewImage": "/demo/products/c-6305-xp-preview.png",
+            "pdfImage": "/demo/products/c-6305-xp-print.png",
+            "previewClassName": "atlas-product-preview--cordura",
+            "technologies": ["xp", "esd", "cordura"],
+            "features": [
+                "CORDURA Obermaterial",
+                "XP metallfreie Durchtritthemmung",
+                "geeignet fuer anspruchsvolle Arbeitsbereiche"
+            ]
+        },
+        {
+            "id": "atlas-sl-9405-boa",
+            "sku": "9405 BOA",
+            "title": "SL 9405 BOA",
+            "subtitle": "Leichter SportLine Sicherheitsschuh mit BOA Fit System.",
+            "category": "Sicherheitshalbschuh",
+            "safetyClass": "S1",
+            "series": "SportLine",
+            "price": "154,90 EUR",
+            "previewImage": "/demo/products/sl-9405-boa-preview.png",
+            "pdfImage": "/demo/products/sl-9405-boa-print.png",
+            "previewClassName": "atlas-product-preview--boa",
+            "technologies": ["boa", "esd", "aktiv-x"],
+            "features": [
+                "BOA Fit System",
+                "leichte SportLine Konstruktion",
+                "atmungsaktives Funktionsfutter"
+            ]
+        },
+        {
+            "id": "atlas-alu-tec-565-xp",
+            "sku": "565 XP",
+            "title": "ALU-TEC 565 XP",
+            "subtitle": "Klassischer S3 Sicherheitsschuh mit Aluminiumkappe.",
+            "category": "Sicherheitsstiefel",
+            "safetyClass": "S3",
+            "series": "ALU-TEC",
+            "price": "119,90 EUR",
+            "previewImage": "/demo/products/alu-tec-565-xp-preview.png",
+            "pdfImage": "/demo/products/alu-tec-565-xp-print.png",
+            "previewClassName": "atlas-product-preview--cordura",
+            "technologies": ["xp", "alu-tec", "esd"],
+            "features": [
+                "Aluminium-Schutzkappe",
+                "rutschhemmende Laufsohle",
+                "robuste Verarbeitung"
+            ]
+        }
+    ],
+    "technologies": [
+        {
+            "id": "xp",
+            "title": "XP",
+            "description": "Metallfreie Durchtritthemmung.",
+            "icon": "/demo/technologies/xp.svg"
+        },
+        {
+            "id": "esd",
+            "title": "ESD",
+            "description": "Schutz gegen elektrostatische Entladung.",
+            "icon": "/demo/technologies/esd.svg"
+        },
+        {
+            "id": "boa",
+            "title": "BOA Fit System",
+            "description": "Drehverschluss fuer praezise Passform.",
+            "icon": "/demo/technologies/boa.svg"
+        },
+        {
+            "id": "aktiv-x",
+            "title": "aktiv-X",
+            "description": "Funktionsfutter fuer hohen Tragekomfort.",
+            "icon": "/demo/technologies/aktiv-x.svg"
+        },
+        {
+            "id": "cordura",
+            "title": "CORDURA",
+            "description": "Widerstandsfaehiges Obermaterial.",
+            "icon": "/demo/technologies/cordura.svg"
+        },
+        {
+            "id": "alu-tec",
+            "title": "ALU-TEC",
+            "description": "Leichte Aluminium-Schutzkappe.",
+            "icon": "/demo/technologies/alu-tec.svg"
+        }
+    ],
+    "decorativeImages": [
+        {
+            "id": "industry-floor",
+            "title": "Industrieboden",
+            "previewImage": "/demo/decorative/industry-floor-preview.jpg",
+            "pdfImage": "/demo/decorative/industry-floor-print.jpg"
+        },
+        {
+            "id": "warehouse",
+            "title": "Lagerumgebung",
+            "previewImage": "/demo/decorative/warehouse-preview.jpg",
+            "pdfImage": "/demo/decorative/warehouse-print.jpg"
+        }
+    ],
+    "catalogs": [
+        {
+            "id": "catalog-demo-1",
+            "title": "Demo Katalog",
+            "owner": {
+                "type": "guest",
+                "id": "guest-demo"
+            },
+            "activePageId": "page-demo-1",
+            "pageIds": ["page-demo-1", "page-demo-2"],
+            "createdAt": "2026-05-12T10:00:00.000Z",
+            "updatedAt": "2026-05-12T10:15:00.000Z"
+        }
+    ],
+    "pages": [
+        {
+            "id": "page-demo-1",
+            "catalogId": "catalog-demo-1",
+            "sortOrder": 0,
+            "layoutId": 1,
+            "title": "Safety Footwear Auswahl",
+            "slots": [
+                {
+                    "slotId": "left",
+                    "item": {
+                        "type": "product",
+                        "id": "atlas-flash-1005-xp",
+                        "overrides": {
+                            "price": "129,90 EUR",
+                            "text": "Dynamisch, leicht und bereit fuer lange Arbeitstage."
+                        }
+                    }
+                },
+                {
+                    "slotId": "right",
+                    "item": {
+                        "type": "product",
+                        "id": "atlas-c-6305-xp",
+                        "overrides": {
+                            "price": "139,90 EUR",
+                            "text": "Robust fuer anspruchsvolle Einsatzbereiche."
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "id": "page-demo-2",
+            "catalogId": "catalog-demo-1",
+            "sortOrder": 1,
+            "layoutId": 2,
+            "title": "SportLine und Klassiker",
+            "slots": [
+                {
+                    "slotId": "left",
+                    "item": {
+                        "type": "product",
+                        "id": "atlas-sl-9405-boa",
+                        "overrides": {
+                            "price": "154,90 EUR",
+                            "text": "BOA Fit System fuer schnelle Anpassung."
+                        }
+                    }
+                },
+                {
+                    "slotId": "center",
+                    "item": {
+                        "type": "product",
+                        "id": "atlas-alu-tec-565-xp",
+                        "overrides": {
+                            "price": "119,90 EUR",
+                            "text": "Klassischer Schutz mit leichter Aluminiumkappe."
+                        }
+                    }
+                },
+                {
+                    "slotId": "right",
+                    "item": null
+                }
+            ]
+        }
+    ]
 }
